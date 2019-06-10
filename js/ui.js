@@ -17,13 +17,18 @@ class UI {
   }
 
   paint(weather) {
-      console.log(weather);
+    //   console.log(weather);
     //   console.log(weather.name);
-      this.location.textContent = weather.name+', '+weather.sys.country;
-      this.desc.textContent = (weather.weather[0].description).charAt(0).toUpperCase()+(weather.weather[0].description).slice(1);
-      this.string.innerHTML = weather.main.temp_max+' '+'&#8457;';
-      this.icon.setAttribute('src',`http://openweathermap.org/img/w/${weather.weather[0].icon}.png`);
-      this.humidity.textContent = `Relative Humidity: ${weather.main.humidity} %`;
-      this.wind.textContent = `Wind Speed: ${weather.wind.speed} miles/hour`
+    this.location.textContent = weather.name + ", " + weather.sys.country;
+    this.desc.textContent =
+      weather.weather[0].description.charAt(0).toUpperCase() +
+      weather.weather[0].description.slice(1);
+    this.string.innerHTML = weather.main.temp_max + " " + "&#8457;";
+    this.icon.setAttribute(
+      "src",
+      `http://openweathermap.org/img/w/${weather.weather[0].icon}.png`
+    );
+    this.humidity.textContent = `Relative Humidity: ${weather.main.humidity} %`;
+    this.wind.textContent = `Wind Speed: ${weather.wind.speed} miles/hour`;
   }
 }
