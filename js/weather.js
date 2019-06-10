@@ -4,7 +4,7 @@
  */
 class Weather {
   constructor(city, country) {
-    this.apikey = "";
+    this.apikey = ""; // Give the API Key from openweathermap.org
     this.city = city;
     this.country = country;
   }
